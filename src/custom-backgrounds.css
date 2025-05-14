@@ -1,0 +1,64 @@
+/**
+ * TEMPORARY STYLING SOLUTIONS
+ * 
+ * This file contains temporary CSS fixes using direct selector targeting.
+ * These should eventually be replaced with proper className-based styling
+ * in the component files themselves.
+ * 
+ * All custom CSS overrides should be placed in this file until refactored.
+ */
+
+/**
+ * Global Overrides for White Backgrounds
+ * 
+ * TEMPORARY: These are aggressive selectors to ensure white backgrounds
+ * are applied where needed
+ */
+
+/* Radix UI and Dialog/Sheet Specific Fixes */
+[id^="radix"] > div,
+[id*="content-basic"] > div,
+[data-radix-popper-content-wrapper],
+[role="dialog"],
+[role="dialog"] > div,
+.bg-background,
+.dialog-content,
+.sheet-content,
+[class*="sheet-content"],
+[class*="dialog-content"],
+[class*="popover-content"],
+[class*="dropdown-content"] {
+  background-color: white !important;
+}
+
+/* Sidebar Panel Fix */
+#root div.lg\:col-span-1 > div,
+.lg\:col-span-1 > div,
+[class*="col-span-1"] > div,
+div.grid.grid-cols-1.lg\:grid-cols-3 > div > div {
+  background-color: white !important;
+}
+
+/**
+ * Even More Aggressive Fixes (if needed)
+ */
+div[role="presentation"] div,
+[class*="dropdown"] > div,
+[class*="popover"] > div,
+form > div.rounded-lg,
+.rounded-lg,
+.shadow-md {
+  background-color: white !important;
+}
+
+/* This will add a debugging outline to help identify elements */
+/* Uncomment this if you need to see which elements are targeted */
+/*
+[id^="radix"] > div,
+[id*="content-basic"] > div,
+[data-radix-popper-content-wrapper],
+[role="dialog"],
+.lg\:col-span-1 > div {
+  outline: 2px solid red !important;
+}
+*/
