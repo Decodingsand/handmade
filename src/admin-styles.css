@@ -1,0 +1,138 @@
+/* Admin-specific styles for seller dashboard and product management */
+
+/* Dashboard header styling */
+.dashboard-header {
+  @apply flex flex-col md:flex-row md:items-center md:justify-between mb-8;
+}
+
+/* Product status toggle styling */
+.product-status-toggle {
+  @apply flex items-center gap-2;
+}
+
+.product-status-active {
+  @apply text-green-600;
+}
+
+.product-status-inactive {
+  @apply text-gray-500;
+}
+
+/* Product table image container */
+.product-table-image {
+  @apply h-12 w-12 rounded overflow-hidden;
+}
+
+/* Product image management in edit form */
+.product-image-container {
+  @apply relative overflow-hidden rounded-md border;
+}
+
+/* The group class will be added directly in the component */
+
+.product-image-overlay {
+  @apply absolute inset-0 bg-black bg-opacity-0 transition-all flex items-center justify-center opacity-0;
+}
+
+.group:hover .product-image-overlay {
+  @apply bg-opacity-40 opacity-100;
+}
+
+.product-image-actions {
+  @apply flex gap-1;
+}
+
+.product-image-button {
+  @apply h-8 w-8 bg-white text-black rounded-full flex items-center justify-center;
+}
+
+.product-image-badge {
+  @apply absolute top-2 left-2 bg-ceramic-secondary text-white text-xs font-medium px-2 py-1 rounded-md;
+}
+
+/* Image upload button */
+.image-upload-button {
+  @apply aspect-square flex flex-col items-center justify-center gap-2 border-dashed border rounded-md p-4;
+}
+
+/* Product edit form layout */
+.product-edit-grid {
+  @apply grid grid-cols-1 lg:grid-cols-3 gap-8;
+}
+
+/* Product preview card */
+.product-preview-card {
+  @apply rounded-lg overflow-hidden mb-4;
+}
+
+.product-preview-image {
+  @apply aspect-square w-full object-cover;
+}
+
+.product-preview-title {
+  @apply font-medium text-lg mb-1;
+}
+
+.product-preview-seller {
+  @apply text-sm text-gray-500 mb-2;
+}
+
+.product-preview-price {
+  @apply font-semibold mb-4;
+}
+
+.product-preview-description {
+  @apply text-sm text-gray-600 line-clamp-4 mb-4;
+}
+
+.product-preview-tags {
+  @apply flex flex-wrap gap-2 mb-4;
+}
+
+.product-preview-meta {
+  @apply flex justify-between items-center;
+}
+
+.product-preview-meta-label {
+  @apply text-sm;
+}
+
+.product-preview-meta-value {
+  @apply font-medium;
+}
+
+/* Tag management */
+.tag-container {
+  @apply flex flex-wrap gap-2 mt-2 mb-4;
+}
+
+.tag-input-container {
+  @apply flex gap-2;
+}
+
+/* Action buttons for product management */
+.action-button-primary {
+  @apply bg-ceramic-secondary hover:bg-opacity-90 flex items-center gap-2;
+}
+
+.action-button-danger {
+  @apply bg-red-500 hover:bg-red-600 flex items-center gap-2;
+}
+
+/* Custom tab styling for product edit form */
+.product-tabs {
+  @apply w-full;
+}
+
+.product-tab-list {
+  @apply grid w-full grid-cols-2 mb-4;
+}
+
+/* Form section styling */
+.form-section {
+  @apply space-y-6;
+}
+
+.form-row {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}

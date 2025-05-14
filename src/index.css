@@ -1,0 +1,202 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Clay Market Earthy Color Palette */
+    --light: #e2e4dc;
+    --white: #ffffff;
+    --dark: #29483c;
+    --primary: #ca3724;
+    --secondary: #e05c25;
+    --info: #ca8c56;
+    --accent-1: #49645b;
+    --accent-2: #7597a7;
+    --accent-3: #9eb4ac;
+    --success: #64af19;
+    --warning: #fec377;
+    --danger: #f60c68;
+
+    /* Mapping to system variables */
+    --background: var(--light);
+    --foreground: var(--dark);
+
+    --card: var(--white);
+    --card-foreground: var(--dark);
+
+    --popover: var(--white);
+    --popover-foreground: var(--dark);
+
+    --button-bg: var(--primary);
+    --button-text: var(--white);
+
+    --muted: var(--accent-3);
+    --muted-foreground: var(--dark);
+
+    --accent: var(--accent-1);
+    --accent-foreground: var(--white);
+
+    --destructive: var(--danger);
+    --destructive-foreground: var(--white);
+
+    --border: var(--accent-3);
+    --input: var(--white);
+    --ring: var(--primary);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: var(--dark);
+    --sidebar-foreground: var(--white);
+    --sidebar-primary: var(--primary);
+    --sidebar-primary-foreground: var(--white);
+    --sidebar-accent: var(--accent-1);
+    --sidebar-accent-foreground: var(--white);
+    --sidebar-border: var(--secondary);
+    --sidebar-ring: var(--info);
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-ceramic-light text-ceramic-dark;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+  }
+
+  /* UI Colors - Apply the new color palette to all elements */
+  
+  /* CTA Buttons */
+  .btn-primary,
+  button.bg-gray-600,
+  .add-to-cart-button,
+  .view-product-button,
+  .checkout-button,
+  .contact-button,
+  [type='submit'],
+  .cart-button button {
+    background-color: var(--primary) !important;
+    color: var(--white) !important;
+  }
+  
+  /* Featured badge styling */
+  .featured-badge {
+    background-color: var(--accent-1) !important;
+    color: var(--white) !important;
+  }
+  
+  /* Secondary UI elements */
+  .bg-ceramic-secondary,
+  .bg-secondary {
+    background-color: var(--secondary) !important;
+    color: var(--white) !important;
+  }
+  
+  /* Accent elements */
+  .bg-ceramic-accent,
+  .bg-accent {
+    background-color: var(--accent-1) !important;
+    color: var(--white) !important;
+  }
+  
+  /* Success messaging */
+  .bg-success,
+  .text-success {
+    background-color: var(--success) !important;
+    color: var(--white) !important;
+  }
+  
+  /* Warning messaging */
+  .bg-warning,
+  .text-warning {
+    background-color: var(--warning) !important;
+    color: var(--dark) !important;
+  }
+  
+  /* Error/danger messaging */
+  .bg-danger,
+  .bg-destructive,
+  .text-danger {
+    background-color: var(--danger) !important;
+    color: var(--white) !important;
+  }
+  
+  /* Info messaging */
+  .bg-info,
+  .text-info {
+    background-color: var(--info) !important;
+    color: var(--white) !important;
+  }
+
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+  
+  h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+  
+  h3 {
+    @apply text-xl md:text-2xl lg:text-3xl;
+  }
+}
+
+@layer components {
+  .ceramics-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-ceramic-accent text-ceramic-secondary hover:bg-opacity-80 transition-all;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-600 text-white hover:bg-ceramic-secondary transition-all;
+  }
+}

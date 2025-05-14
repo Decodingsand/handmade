@@ -1,0 +1,74 @@
+/* Custom component-specific styles */
+
+/* Search input background to white */
+.flex.h-10.w-full.rounded-md.border.border-input.bg-background.px-3.py-2.text-base.ring-offset-background[type="text"],
+input[placeholder="Search for ceramics..."] {
+  background-color: white !important;
+}
+
+/* Meet the Artisans link background */
+a.inline-flex.items-center.justify-center.gap-2.whitespace-nowrap.rounded-md.text-sm.font-medium[href="/sellers"] {
+  background-color: #7597a7 !important;
+  color: white !important;
+}
+
+/* Search button background */
+button.inline-flex.items-center.justify-center.gap-2.whitespace-nowrap.rounded-md.text-sm.font-medium.w-10.absolute.right-0.top-0.h-full {
+  background-color: #64af19 !important;
+  color: white !important;
+}
+
+/* Product card background to white */
+.rounded-lg.border.bg-card.text-card-foreground.shadow-sm.overflow-hidden.h-full.flex.flex-col {
+  background-color: white !important;
+}
+
+/* View All button background to white */
+button.inline-flex.items-center.justify-center.gap-2.whitespace-nowrap.rounded-md.text-sm.font-medium.ring-offset-background.transition-colors.border.border-input.bg-background.hover\:bg-accent.hover\:text-accent-foreground.h-10.px-4.py-2 {
+  background-color: white !important;
+}
+
+/* View Profile links */
+a[href^="/seller/"].w-full.bg-gray-600,
+.inline-flex.items-center.justify-center[href^="/seller/"] {
+  background-color: #496456 !important;
+  color: white !important;
+}
+
+/* Product View buttons */
+button.view-product-button {
+  background-color: #7fbe42 !important;
+  color: white !important;
+}
+
+/* Hero container drop shadow */
+.hero-container {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero image subtle shadow effect */
+.hero-image {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-image img {
+  display: block;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Remove borders from LinkWithRef elements */
+a.inline-flex {
+  border: none !important;
+}
+
+/* Header bottom border */
+header.py-4 {
+  border-bottom: 1px solid #e3e4dc !important;
+}
+
+/* Product card border color */
+.rounded-lg.border.bg-card {
+  border-color: #a1a29c !important;
+}
